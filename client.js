@@ -4,12 +4,7 @@ const connect = function() {
   const conn = net.createConnection({ 
     host: 'localhost',
     port: 50541
-  }
-  // , () => {
-  //   console.log('connected to server!');
-  //   conn.write("Name: MAG");
-  // } 
-  );
+  });
   // interpret incoming data as text
   conn.setEncoding('utf8');
 
@@ -44,13 +39,10 @@ const connect = function() {
   return conn;
 }
 
-
-
 // conn.on('data', (data) => {
 //   console.log('Message from client: ', data)
 // });
 
 
-
 //console.log('Connecting ...');
-module.exports = connect;
+module.exports = {connect};
