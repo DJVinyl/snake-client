@@ -18,6 +18,20 @@ const connect = function() {
     conn.write("Name: MAG");
   });
 
+  conn.on('connect', () => {
+    //conn.write("Move: up");
+      // setInterval(() => {
+      //   conn.write("Move: left");
+      // }, 50);
+    // conn.write("Move: left");
+    // conn.write("Move: down");
+    // conn.write("Move: down");
+    // conn.write("Move: right");
+    // conn.write("Move: right");
+  });
+
+
+
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
